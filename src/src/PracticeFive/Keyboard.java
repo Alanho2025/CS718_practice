@@ -1,4 +1,4 @@
-package Practice05;
+package PracticeFive;
 
 import java.io.IOException;
 import java.util.NoSuchElementException;
