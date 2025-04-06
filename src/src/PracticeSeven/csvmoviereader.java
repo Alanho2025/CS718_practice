@@ -16,30 +16,28 @@ public class csvmoviereader extends movieReader {
     protected movie[] loadMovies(String fileName) {
         List<movie> movies = new ArrayList<>();
         try (Scanner scanner = new Scanner(new File(fileName))) {
-            while (scanner.hasNextLine()) {
-                String line = scanner.nextLine().trim();
-                if (line.isEmpty()) continue;  // 跳過空行
 
-                String[] parts = line.split(",");
-                if (parts.length != 4) {
-                    System.err.println("Invalid CSV format in line: " + line);
-                    continue;
-                }
+            // We read the number of movies from the first line. Alternatively we could use a collection, such as a List.
+            // That way we wouldn't need to know how many movies there were in advance.
+            String firstLine = scanner.nextLine();
+            int len = "Number of movies: ".length();
+            String sNumMovies = firstLine.substring(len);
+            int numMovies = Integer.parseInt(sNumMovies);
+            movie[] films = new movie[numMovies];
 
-                try {
-                    String title = parts[0].trim();
-                    int year = Integer.parseInt(parts[1].trim());
-                    int duration = Integer.parseInt(parts[2].trim());
-                    String director = parts[3].trim();
-                    movies.add(new movie(title, year, duration, director));
-                } catch (NumberFormatException e) {
-                    System.err.println("Error parsing numbers in line: " + line);
-                }
+            scanner.useDelimiter(",|\\r\\n");
+            for (int i = 0; i < films.length; i++) {
+
+                films[i] = new movie(scanner.next(), scanner.nextInt(), scanner.nextInt(), scanner.next());
+
             }
-            System.out.println("Movies loaded successfully from " + fileName);
-        } catch (FileNotFoundException e) {
-            System.err.println("Error: File not found - " + fileName);
+
+            return films;
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+
         }
-        return movies.toArray(new movie[0]);
     }
 }

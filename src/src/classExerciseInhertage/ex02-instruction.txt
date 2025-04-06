@@ -1,0 +1,12 @@
+Exercise Two
+
+In this programme, we would like to interact with three types of vehicles, horse, car and truck.
+Firstly, we would like to display the weight/mass (units in kg) and the speed (units in m/s) of the three vehicles.
+Then, we would like to calculate the maximum momentum that each vehicle can have.
+The formula for calculate momentum is " momentum = mass * speed ".
+After we calculate the maximum momentum of each vehicle, the programme should print the largest value among all vehicles.
+Lastly, some vehicles can be filled up by fuels. The programme will examine through all vehicles and  fill up the vehicles that can take fuels.
+
+1)  Please examine all the classes in the ex02 folder carefully to understand the classes.
+    For this exercise, you only need to modify this VehicleManager class.
+2)  Please follow the steps 1 - 4 inside the VehicleManager class (TODO 1. - 4.) to achieve the desired outcome.

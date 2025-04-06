@@ -1,0 +1,35 @@
+Exercise One
+
+In this programme, we would like to interact with three types of vehicles, horse, car and truck.
+Firstly, we would like to display the weight/mass (units in kg) and the speed (units in m/s) of the three vehicles.
+Then, we would like to calculate the maximum momentum that each vehicle can have.
+The formula for calculate momentum is " momentum = mass * speed ".
+After we calculate the maximum momentum of each vehicle, the programme should print the largest value among all vehicles.
+Lastly, some vehicles can be filled up by fuels. The programme will examine through all vehicles and  fill up the vehicles that can take fuels.
+
+1)  Examine the VehicleManager class in ex01 folder to see what the programme would like to achieve.
+    We will be creating several Java classes and interface to contain all the information.
+2)  Create an abstract class called Vehicle.
+    This class should contain properties like vehcileType, mass(weight) and speed of each vehicle.
+    It should include a constructor that can take parameters to set all properties of the vehicle.
+    It should contain two methods, calculateMaxMomentum() and toString().
+    The calculateMaxMomentum() method should be using the formula described above to return the max momentum.
+    The toString() method should display the weight and speed information for the vehicle.
+    e.g. This horse weighs 300kg and can speed up to 24.44m/s.
+3)  Create a Java class called Horse.
+    The Horse object should own all the properties & behaviours described in the Vehicle class.
+    It should include a constructor that can take parameters. It will then use the parent's constructor to initialise the instance variables.
+4)  Create an interface called IFuel.
+    It should include the fillUp() method which doesn't return any value.
+5)  Create a Java class called Car.
+    The Car object should own all the properties & behaviours described in the Vehicle class.
+    In addition, it should have one extra property called fuelTankCapacity (as a whole number).
+    It should implement the IFuel interface and include the fillUp() method.
+    The fillUP() method should display the message to indicate the car is full of patrol.
+    e.g. "The car is now full of petrol with 55L."
+6)  Create a Java class called Truck.
+    The Truck object should own all the properties & behaviours described in the Vehicle class.
+    In addition, it should have one extra property called fuelTankCapacity (as a whole number).
+    It should implement the IFuel interface and include the fillUp() method.
+    The fillUP() method should display the message to indicate the car is full of patrol.
+    e.g. "The truck is now full of petrol with 33000L."

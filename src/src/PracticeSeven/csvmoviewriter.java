@@ -20,7 +20,13 @@ public class csvmoviewriter extends moviewriter {
     protected void saveMovies(String fileName, movie[] films) {
         try (PrintWriter writer = new PrintWriter(new FileWriter(fileName))) {
             for (movie movie : films) {
-                writer.println(movie.toCSVString());
+                writer.print(movie.getName());
+                writer.print(',');
+                writer.print(movie.getYear());
+                writer.print(',');
+                writer.print(movie.getLengthInMinutes());
+                writer.print(',');
+                writer.println(movie.getDirector());
             }
             System.out.println("Movies saved successfully to " + fileName);
         } catch (IOException e) {
