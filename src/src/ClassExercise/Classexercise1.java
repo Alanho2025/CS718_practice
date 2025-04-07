@@ -1,6 +1,6 @@
 package ClassExercise;
 
-import PracticeFour.Keyboard;
+import PracticeFour_exception.Keyboard;
 
 import java.util.ArrayList;
 import java.util.List;
