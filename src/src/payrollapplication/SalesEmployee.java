@@ -14,7 +14,7 @@ public class SalesEmployee extends Employee {
     }
 
     public double payBonus() {
-        double bonusRate = Math.random()/10;
+        double bonusRate = Math.random();
         double bonusSale = bonusRate * sales;
         double bonus = commission * bonusSale;
         return bonus;
