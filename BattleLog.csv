@@ -1,0 +1,42 @@
+
+------------------
+Mue ( PHYSICAL ) - health: 100 )
+Gungue ( GHOST ) - health: 120 )
+
+------------------
+Mue excute Move: Physcial Attack ( PHYSICAL, Power : 30)cause damage30
+Mue current health: 100
+Gungue current health: 90
+
+
+------------------
+Gungue Excute Move: Dark Ball ( GHOST, Power : 40) cause damage40
+Mue current health: 60
+Gungue current health: 90
+
+
+------------------
+Mue excute Move: Physcial Attack ( PHYSICAL, Power : 30)cause damage30
+Mue current health: 60
+Gungue current health: 60
+
+
+------------------
+Gungue Excute Move: Dark Ball ( GHOST, Power : 40) cause damage40
+Mue current health: 20
+Gungue current health: 60
+
+
+------------------
+Mue excute Move: Physcial Attack ( PHYSICAL, Power : 30)cause damage30
+Mue current health: 20
+Gungue current health: 30
+
+
+------------------
+Gungue Excute Move: Ghosst Fire ( GHOST, Power : 30) cause damage30
+Mue current health: -10
+Gungue current health: 30
+
+AI win
+
