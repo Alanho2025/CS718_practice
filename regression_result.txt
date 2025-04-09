@@ -1,0 +1,25 @@
+Input Data 
+House [ size :130.0 sqft, Price:310000.0]
+House [ size :70.0 sqft, Price:210000.0]
+House [ size :140.0 sqft, Price:330000.0]
+House [ size :170.0 sqft, Price:380000.0]
+House [ size :50.0 sqft, Price:180000.0]
+House [ size :100.0 sqft, Price:280000.0]
+House [ size :200.0 sqft, Price:420000.0]
+House [ size :240.0 sqft, Price:450000.0]
+---------------------------------- 
+
+Simple Linear Regression Analysis 
+
+The average price of the size is 137.5
+The average price of the house is 320000.0
+---------------------------------- 
+
+Predicted House Prices 
+
+Size :210.0, Predicted House Prices 426449.39965694677
+Size :30.0, Predicted House Prices 162161.23499142367
+Size :280.0, Predicted House Prices 529228.1303602059
+Size :45.0, Predicted House Prices 184185.24871355057
+Size :200.0, Predicted House Prices 411766.7238421956
+Size :359.0, Predicted House Prices 645221.269296741
