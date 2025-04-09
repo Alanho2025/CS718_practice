@@ -42,23 +42,25 @@ public class Arrayexception {
 
         System.out.println(index);
     }
-    public static List<Integer> generateArrayList(){
+
+    public static List<Integer> generateArrayList() {
         List<Integer> list = new ArrayList<>();
         //first value - five value
         for (int i = 0; i < 5; i++) {
-            list.add((int)(Math.random()*1000));
+            list.add((int) (Math.random() * 1000));
         }
         return list;
     }
+
     public static int checkNumber(List<Integer> list) throws InvalidIndexException, IndexTooHighException, IndexTooLowException {
         int index = 0;
         boolean flag = false;
-        while(!flag) {
+        while (!flag) {
             try {
-                index = checkindex(index,list);
+                index = checkindex(index, list);
                 flag = true;
 
-            }catch(InvalidIndexException e) {
+            } catch (InvalidIndexException e) {
                 System.out.println("Error: Invalid input! Please enter an integer.");
             } catch (IndexTooLowException e) {
                 System.out.println("Error: Index too low! Must be at least 0.");
@@ -69,17 +71,18 @@ public class Arrayexception {
         }
         return list.get(index);
     }
-    public static int checkindex (int index,List<Integer> list) throws IndexTooLowException,IndexTooHighException, InvalidIndexException{
-        try{
+
+    public static int checkindex(int index, List<Integer> list) throws IndexTooLowException, IndexTooHighException, InvalidIndexException {
+        try {
             System.out.println("type your choice of index");
             index = Integer.valueOf(Keyboard.readInput());
-            if(index<0){
+            if (index < 0) {
                 throw new IndexTooLowException("Index Too Low");
-            }else if(index>list.size()) {
+            } else if (index > list.size()) {
                 throw new IndexTooHighException("Index Too High");
             }
             return index;
-        }catch(NumberFormatException e){
+        } catch (NumberFormatException e) {
             throw new InvalidIndexException("Please enter a number");
         }
     }

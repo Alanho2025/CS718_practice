@@ -65,9 +65,7 @@ public class mocktest {
         map.put("Beck", 76);
         map.put("Annie", 56);
         map.put("Soul", 96);
-        map.put("Duck", 44);
-
-        TreeMap<String,Integer> treeMap = new TreeMap<>(map);
+        map.put("Duck", 44);TreeMap<String,Integer> treeMap = new TreeMap<>(map);
         System.out.println(map);
         System.out.println(treeMap);
     }
@@ -88,7 +86,7 @@ public class mocktest {
                 System.out.println("It's the weekend!");
                 break;
             default:
-                System.out.println("It's a weekday.");
+                    System.out.println("It's a weekday.");
         }
     }
 }
